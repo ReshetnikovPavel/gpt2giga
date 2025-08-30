@@ -69,7 +69,7 @@ def process_gigachat_response(giga_resp: ChatCompletion, gpt_model: str, is_tool
     result = {
         "id": "chatcmpl-" + str(uuid.uuid4()),
         "object": "chat.completion",
-        "created": int(time.time() * 1000),
+        "created": int(time.time()),
         "model": gpt_model,
         "choices": giga_dict["choices"],
         "usage": {
